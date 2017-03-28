@@ -1,7 +1,7 @@
 func! CheckGlobals()
         if g:time_between_breaks
                 echom "Time Set"
-                finish
+                " finish
         else
                 echom "Time not Set"
         end
