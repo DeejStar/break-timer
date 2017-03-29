@@ -6,7 +6,7 @@
 scriptencoding utf-8
 
 func! CheckGlobals()
-        if g:time_between_breaks
+        if g:time_between_breaks > 0
                 echom "Time Set"
                 " finish
         else
