@@ -11,6 +11,7 @@ endfunc
 
 func! CheckGlobals()
         call CheckTimeBetweenBreaks()
+        call CheckBreakTimerEnabled()
 endfunc
 
 func! CheckTimeBetweenBreaks()
@@ -19,6 +20,14 @@ func! CheckTimeBetweenBreaks()
                 " finish
         else
                 echom "Time not Set"
+        end
+endfunc
+
+func! CheckBreakTimerEnabled()
+        if g:break_timer_enabled == 0
+                echom "Timer disabled"
+        else
+                echom "Timer enabled"
         end
 endfunc
 
